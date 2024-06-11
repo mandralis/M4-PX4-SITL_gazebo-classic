@@ -1,7 +1,5 @@
 # M4 PX4 Gazebo Plugin Suite for MAVLink SITL and HITL
 
-Hi !
-
 [![Build Status](https://github.com/PX4/sitl_gazebo/workflows/Build%20Tests/badge.svg)](https://github.com/PX4/sitl_gazebo/actions?query=workflow%3A%22Build+Tests%22) [![MacOS Build Tests](https://github.com/PX4/sitl_gazebo/workflows/MacOS%20Build%20Tests/badge.svg)](https://github.com/PX4/sitl_gazebo/actions?query=workflow%3A%22MacOS+Build+Tests%22)
 
 This is a flight simulator for rovers, boats, multirotors, VTOL, fixed wing. It uses the motor model and other pieces from the RotorS simulator, but in contrast to RotorS has no dependency on ROS. Original project: https://github.com/ethz-asl/rotors_simulator.

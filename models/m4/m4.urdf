@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Author: Ioannis Mandralis (imandralis@caltech.edu) -->
+<robot
+  name="M4 v2  Assembly URDF rotating wheels z up">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.018276 0.00049378 0.068096"
+        rpy="0 0 0" />
+      <mass
+        value="2.0875" />
+      <inertia
+        ixx="0.0026673"
+        ixy="-2.9024E-06"
+        ixz="-1.2076E-05"
+        iyy="0.0024337"
+        iyz="-2.1607E-06"
+        izz="0.0018633" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://M4 v2  Assembly URDF rotating wheels z up/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://M4 v2  Assembly URDF rotating wheels z up/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="arml">
+    <inertial>
+      <origin
+        xyz="0.00014974 0.10568 0.013666"
+        rpy="0 0 0" />
+      <mass
+        value="0.78267" />
+      <inertia
+        ixx="0.00059441"
+        ixy="5.5135E-08"
+        ixz="-2.6815E-07"
+        iyy="0.0018939"
+        iyz="8.8049E-08"
+        izz="0.0023095" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://M4 v2  Assembly URDF rotating wheels z up/meshes/arml.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://M4 v2  Assembly URDF rotating wheels z up/meshes/arml.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_to_arml"
+    type="revolute">
+    <origin
+      xyz="-0.00013437 0.068076 0.094"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="arml" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="1.5707"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="rotor1">
+    <inertial>
+      <origin
+        xyz="4.2406E-06 -8.2577E-06 -0.00088754"
+        rpy="0 0 0" />
+      <mass
+        value="0.0071413" />
+      <inertia
+        ixx="7.3172E-06"
+        ixy="1.9481E-10"
+        ixz="-2.2562E-11"
+        iyy="7.3132E-06"
+        iyz="3.6224E-11"
+        izz="1.4546E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://M4 v2  Assembly URDF rotating wheels z up/meshes/rotor1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.11373 0.11373 0.11373 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://M4 v2  Assembly URDF rotating wheels z up/meshes/rotor1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arml_to_rotor1"
+    type="revolute">
+    <origin
+      xyz="-0.16509 0.13673 0.069563"
+      rpy="0 0 0" />
+    <parent
+      link="arml" />
+    <child
+      link="rotor1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-100000000"
+      upper="100000000"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="rotor2">
+    <inertial>
+      <origin
+        xyz="-1.17737169622045E-05 1.12252540674929E-05 -0.000889290280344374"
+        rpy="0 0 0" />
+      <mass
+        value="0.00714564013108659" />
+      <inertia
+        ixx="7.31758327555066E-06"
+        ixy="2.54896915952875E-09"
+        ixz="-4.24451322079936E-13"
+        iyy="7.31701768202222E-06"
+        iyz="1.76818284103311E-10"
+        izz="1.45498127662999E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://M4 v2  Assembly URDF rotating wheels z up/meshes/rotor2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://M4 v2  Assembly URDF rotating wheels z up/meshes/rotor2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arml_to_rotor2"
+    type="revolute">
+    <origin
+      xyz="0.16491 0.13673 0.069563"
+      rpy="0 0 0" />
+    <parent
+      link="arml" />
+    <child
+      link="rotor2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-100000000"
+      upper="100000000"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="wheel1">
+    <inertial>
+      <origin
+        xyz="-2.08052685894689E-06 3.65370608023524E-06 0.00399517595201851"
+        rpy="0 0 0" />
+      <mass
+        value="0.290684225280697" />
+      <inertia
+        ixx="0.00194912421235172"
+        ixy="5.9281624746263E-08"
+        ixz="-2.21930431817214E-09"
+        iyy="0.0019490736447665"
+        iyz="-1.35083056578608E-09"
+        izz="0.00385034804194369" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://M4 v2  Assembly URDF rotating wheels z up/meshes/wheel1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://M4 v2  Assembly URDF rotating wheels z up/meshes/wheel1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arml_to_wheel1"
+    type="revolute">
+    <origin
+      xyz="-0.16509 0.13673 0.034438"
+      rpy="0 0 0" />
+    <parent
+      link="arml" />
+    <child
+      link="wheel1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-100000000"
+      upper="100000000"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="wheel2">
+    <inertial>
+      <origin
+        xyz="-2.24392517567118E-07 4.21097307244656E-06 0.00399517328665498"
+        rpy="0 0 0" />
+      <mass
+        value="0.290684075605273" />
+      <inertia
+        ixx="0.00194916054508742"
+        ixy="1.56598641853391E-08"
+        ixz="-2.6268153785502E-09"
+        iyy="0.00194903594875042"
+        iyz="-2.60692636423233E-10"
+        izz="0.00385034668266541" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://M4 v2  Assembly URDF rotating wheels z up/meshes/wheel2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://M4 v2  Assembly URDF rotating wheels z up/meshes/wheel2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arml_to_wheel2"
+    type="revolute">
+    <origin
+      xyz="0.16491 0.13673 0.034438"
+      rpy="0 0 0" />
+    <parent
+      link="arml" />
+    <child
+      link="wheel2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-100000000"
+      upper="100000000"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="armr">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://M4 v2  Assembly URDF rotating wheels z up/meshes/armr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://M4 v2  Assembly URDF rotating wheels z up/meshes/armr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_to_armr"
+    type="revolute">
+    <origin
+      xyz="-0.00013437 -0.067924 0.094"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="armr" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="1.5707"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="rotor0">
+    <inertial>
+      <origin
+        xyz="-7.26046054677632E-06 -8.97346881911787E-07 -0.000887642007110126"
+        rpy="0 0 0" />
+      <mass
+        value="0.00714107560950859" />
+      <inertia
+        ixx="7.31411492495745E-06"
+        ixy="-1.23711344772355E-09"
+        ixz="8.37416881128931E-11"
+        iyy="7.31669024362818E-06"
+        iyz="8.66562695820946E-12"
+        izz="1.45461672125735E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://M4 v2  Assembly URDF rotating wheels z up/meshes/rotor0.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.113725490196078 0.113725490196078 0.113725490196078 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://M4 v2  Assembly URDF rotating wheels z up/meshes/rotor0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="armr_to_rotor0"
+    type="revolute">
+    <origin
+      xyz="0.16491 -0.13673 0.069563"
+      rpy="0 0 0" />
+    <parent
+      link="armr" />
+    <child
+      link="rotor0" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-100000000"
+      upper="100000000"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="rotor3">
+    <inertial>
+      <origin
+        xyz="1.10500009720266E-05 6.26509832979405E-06 -0.000889132575548263"
+        rpy="0 0 0" />
+      <mass
+        value="0.00714453428384151" />
+      <inertia
+        ixx="7.31725920126809E-06"
+        ixy="-3.03590296499141E-10"
+        ixz="1.29978621014555E-10"
+        iyy="7.31363932365635E-06"
+        iyz="3.8654868508442E-11"
+        izz="1.45460580990401E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://M4 v2  Assembly URDF rotating wheels z up/meshes/rotor3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://M4 v2  Assembly URDF rotating wheels z up/meshes/rotor3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="armr_to_rotor3"
+    type="revolute">
+    <origin
+      xyz="-0.16509 -0.13673 0.069562"
+      rpy="0 0 0" />
+    <parent
+      link="armr" />
+    <child
+      link="rotor3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-100000000"
+      upper="100000000"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="wheel0">
+    <inertial>
+      <origin
+        xyz="-4.20770534262371E-06 7.41925555436396E-08 0.00399517099050151"
+        rpy="0 0 0" />
+      <mass
+        value="0.290684175940761" />
+      <inertia
+        ixx="0.00194903465525589"
+        ixy="-6.33697898951187E-09"
+        ixz="4.44651458394226E-11"
+        iyy="0.00194916277425697"
+        iyz="-2.62305408017566E-09"
+        izz="0.00385034763388815" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://M4 v2  Assembly URDF rotating wheels z up/meshes/wheel0.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://M4 v2  Assembly URDF rotating wheels z up/meshes/wheel0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="armr_to_wheel0"
+    type="revolute">
+    <origin
+      xyz="0.16491 -0.13673 0.034438"
+      rpy="0 0 0" />
+    <parent
+      link="armr" />
+    <child
+      link="wheel0" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-100000000"
+      upper="100000000"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="wheel3">
+    <inertial>
+      <origin
+        xyz="-3.54165642575677E-06 -2.26403105196837E-06 0.00399517826837899"
+        rpy="0 0 0" />
+      <mass
+        value="0.290684234949803" />
+      <inertia
+        ixx="0.00194907969950151"
+        ixy="-6.15111525100603E-08"
+        ixz="1.46024132333957E-09"
+        iyy="0.00194911816433328"
+        iyz="-2.15717482123109E-09"
+        izz="0.00385034804672442" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://M4 v2  Assembly URDF rotating wheels z up/meshes/wheel3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://M4 v2  Assembly URDF rotating wheels z up/meshes/wheel3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="armr_to_wheel3"
+    type="revolute">
+    <origin
+      xyz="-0.16509 -0.13673 0.034438"
+      rpy="0 0 0" />
+    <parent
+      link="armr" />
+    <child
+      link="wheel3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-100000000"
+      upper="100000000"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
